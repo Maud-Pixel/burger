@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Burger</title>
+</head>
+<body>
+    <div class="container">
+        <div class="b-column-left">
+            <div class="b-column-left-item">
+            <i id="fa" class="fa fa-search"></i>
+            </div>
+            <div class="b-column-left-item">
+            <i class="fa fa-angle-double-right"></i>
+            </div>
+        </div>
+        <div class="b-column-right">
+            <div class="b-header">
+                <div class="b-header-menu">
+                    <div class="b-header-menu-input">
+                        <div class="b-header-menu-input-group">
+                            <li class="b-header-menu-imput__home">Home</li>
+                            <li><i class="fa fa-circle"></i></li>
+                        </div>
+                        <div class="b-header-menu-input-group">
+                            <li class="b-header-menu-input__products b-header-menu-input__active">Products</li>
+                            <li><i class="fa fa-circle"></i></li>
+                        </div>
+                        <div class="b-header-menu-input-group">
+                            <li class="b-header-menu-input__recipes">Recipes</li>
+                            <li><i class="fa fa-circle"></i></li>
+                        </div>
+                        <div class="b-header-menu-input-group">
+                            <li class="b-header-menu-input__about">About</li>
+                            <li><i class="fa fa-circle"></i></li>
+                        </div>
+                    </div>
+                </div>
+                <div class="b-header-button">
+                    <button class="btn b-header-button__login">Log in</button>
+                    <button class="btn b-header-button__signup">Sign up</button>
+                </div>
+            </div>
+
+            <div class="b-content">
+                <div class="b-content-primary">
+                    <div class="b-content-primary-details">
+                        <div class="b-content-primary-details-check">
+                            <input class="radio" name="sheet" type="radio" value="1" checked>
+                            <input class="radio" name="sheet" type="radio" value="2">
+                            <input class="radio" name="sheet" type="radio" value="3">
+                            <input class="radio" name="sheet" type="radio" value="4">
+                        </div>
+                        <div class="b-content-primary-details-calories">
+                            <p class="calories">455 kcal</p>
+                        </div>
+                    </div>
+                    <img id="burger_big" src="assets/burger1.png" style="width:400px;height: 350px;" alt="burger classic">
+                    <h2>Classic Burger</h2>
+                    <div class="b-content-primary-composition">
+                        <p class="b-content-primary-composition-item">Fat-26g</p>
+                        <p class="b-content-primary-composition-item">Saturates-10g</p>
+                        <p class="b-content-primary-composition-item">Sugar-18g</p>
+                        <p class="b-content-primary-composition-item">Salt-1g</p>
+                    </div>
+                    
+
+                    <p class="b-content-primary-description">Le plus authentique de tous nos hamburgers gourmets, 
+                        le Classic Burger est réalisé à partir d’ingrédients frais et d’une viande 
+                        de bœuf d’exception. Aussi bon pour les carnis que les veggies</p>
+                    <div class="b-content-primary-purchase">
+                        <div class="b-content-primary-purchase-btn-add">
+                            <button id="button-minus"class="button-minus">
+                                -
+                            </button>
+                            <div id="number" class="number">0</div>
+                            <button id="button-plus" class="button-plus">
+                               +
+                            </button>
+                        </div>
+                       
+                        <div class="price">€<span class="cost" base="18">18</span></div>
+                        <button class="b-content-primary-purchase-btn-shopping">
+                            <i class="fa fa-shopping-cart"></i>
+                            <div id="dot">
+                                <i class="fa fa-circle"></i>
+                                <i class="fa fa-circle"></i>
+                                <i class="fa fa-circle"></i>
+                                <i class="fa fa-circle"></i>
+                            </div>
+                            <div id="card" class="card">Add To Card</div>
+                        </button>
+                    </div>
+                    
+                </div>
+                <div class="b-content-secondary">
+                    <div class="b-content-secondary-one">
+                        <div class="b-content-secondary-details">
+                            <div class="b-content-secondary-details-check">
+                                <input class="radio" name="sheet" type="radio" value="1" checked>
+                                <input class="radio" name="sheet" type="radio" value="2">
+                                <input class="radio" name="sheet" type="radio" value="3">
+                                <input class="radio" name="sheet" type="radio" value="4">
+                            </div>
+                            <div class="b-content-secondary-details-calories">
+                                <p class="calories">455 kcal</p>
+                            </div>
+                        </div>
+                        <img src="assets/doubleBurger.png" style="width:200px;height: 150px;" alt="burger classic">
+                        <h2>Double Burger</h2>
+                        <div class="b-content-secondary-composition">
+                            <p class="b-content-secondary-composition-item">Fat-26g</p>
+                            <p class="b-content-secondary-composition-item">Saturates-10g</p>
+                            <p class="b-content-secondary-composition-item">Sugar-18g</p>
+                            <p class="b-content-secondary-composition-item">Salt-1g</p>
+                        </div>
+                        <p class="b-content-secondary-description">Le plus authentique de tous nos hamburgers gourmets, 
+                            le Classic Burger <span class="invisible">est réalisé à partir d’ingrédients frais et d’une viande 
+                            de bœuf d’exception. Aussi bon pour les carnis que les veggies</span></p>
+                            <div class="b-content-secondary-purchase">
+                                <div class="b-content-secondary-purchase-btn-add">
+                                    <button id="button-minus" class="button-minus">
+                                        -
+                                    </button>
+                                    <div id="number" class="number">0</div>
+                                    <button id="button-plus" class="button-plus">
+                                       +
+                                    </button>
+                                </div>
+                               
+                                <div class="price">€<span class="cost" base="18">18</div>
+                                <button class="b-content-secondary-purchase-btn-shopping">
+                                    <i class="fa fa-shopping-cart"></i>
+                                </button>
+                            </div>
+
+                    </div>
+                    <div class="b-content-secondary-two"><div class="b-content-secondary-details">
+                        <div class="b-content-secondary-details-check">
+                            <input class="radio" name="sheet" type="radio" value="1" checked>
+                            <input class="radio" name="sheet" type="radio" value="2">
+                            <input class="radio" name="sheet" type="radio" value="3">
+                            <input class="radio" name="sheet" type="radio" value="4">
+                        </div>
+                        <div class="b-content-secondary-details-calories">
+                            <p class="calories">455 kcal</p>
+                        </div>
+                    </div>
+                    <img src="assets/mushroomBurger.png" style="width:200px;height: 150px;" alt="burger classic">
+                    <h2>Mushroom Burger</h2>
+                    <div class="b-content-secondary-composition">
+                        <p class="b-content-secondary-composition-item">Fat-26g</p>
+                        <p class="b-content-secondary-composition-item">Saturates-10g</p>
+                        <p class="b-content-secondary-composition-item">Sugar-18g</p>
+                        <p class="b-content-secondary-composition-item">Salt-1g</p>
+                    </div>
+                    <p class="b-content-secondary-description">Le plus authentique de tous nos hamburgers gourmets, 
+                        le Classic Burger <span class="invisible">est réalisé à partir d’ingrédients frais et d’une viande 
+                        de bœuf d’exception. Aussi bon pour les carnis que les veggies</span></p>
+                        <div class="b-content-secondary-purchase">
+                            <div class="b-content-secondary-purchase-btn-add">
+                                <button id="button-minus" class="button-minus">
+                                    -
+                                </button>
+                                <div id="number" class="number">0</div>
+                                <button id="button-plus" class="button-plus">
+                                   +
+                                </button>
+                            </div>
+                          
+                            <div class="price">€<span class="cost" base="16">16</div>
+                            <button class="b-content-secondary-purchase-btn-shopping">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div></div>
+                    <div class="b-content-secondary-three"><div class="b-content-secondary-details">
+                        <div class="b-content-secondary-details-check">
+                            <input class="radio" name="sheet" type="radio" value="1" checked>
+                            <input class="radio" name="sheet" type="radio" value="2">
+                            <input class="radio" name="sheet" type="radio" value="3">
+                            <input class="radio" name="sheet" type="radio" value="4">
+                        </div>
+                        <div class="b-content-secondary-details-calories">
+                            <p class="calories">455 kcal</p>
+                        </div>
+                    </div>
+                    <img src="assets/piliBurger.png" style="width:200px;height: 150px;" alt="burger classic">
+                    <h2>Pili Burger</h2>
+                    <div class="b-content-secondary-composition">
+                        <p class="b-content-secondary-composition-item">Fat-26g</p>
+                        <p class="b-content-secondary-composition-item">Saturates-10g</p>
+                        <p class="b-content-secondary-composition-item">Sugar-18g</p>
+                        <p class="b-content-secondary-composition-item">Salt-1g</p>
+                    </div>
+                    <p class="b-content-secondary-description">Le plus authentique de tous nos hamburgers gourmets, 
+                        le Classic Burger <span class="invisible">>est réalisé à partir d’ingrédients frais et d’une viande 
+                        de bœuf d’exception. Aussi bon pour les carnis que les veggies</span></p>
+                        <div class="b-content-secondary-purchase">
+                            <div class="b-content-secondary-purchase-btn-add">
+                                <button id="button-minus" class="button-minus">
+                                    -
+                                </button>
+                                <div id="number" class="number">0</div>
+                                <button id="button-plus" class="button-plus">
+                                   +
+                                </button>
+                            </div>
+                           
+                            <div class="price">€<span class="cost" base="15">15</div>
+                            <button class="b-content-secondary-purchase-btn-shopping">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="b-content-secondary-four">
+                        <div class="b-content-secondary-details">
+                            <div class="b-content-secondary-details-check">
+                                <input class="radio" name="sheet" type="radio" value="1" checked>
+                                <input class="radio" name="sheet" type="radio" value="2">
+                                <input class="radio" name="sheet" type="radio" value="3">
+                                <input class="radio" name="sheet" type="radio" value="4">
+                            </div>
+                            <div class="b-content-secondary-details-calories">
+                                <p class="calories">455 kcal</p>
+                            </div>
+                        </div>
+                        <img src="assets/veggan.png" style="width:200px;height: 150px;" alt="burger classic">
+                        <h2>Vegan Burger</h2>
+                        <div class="b-content-secondary-composition">
+                            <p class="b-content-secondary-composition-item">Fat-26g</p>
+                            <p class="b-content-secondary-composition-item">Saturates-10g</p>
+                            <p class="b-content-secondary-composition-item">Sugar-18g</p>
+                            <p class="b-content-secondary-composition-item">Salt-1g</p>
+                        </div>
+                        <p class="b-content-secondary-description">Le plus authentique de tous nos hamburgers gourmets, 
+                            le Classic Burger <span class="invisible">est réalisé à partir d’ingrédients frais et d’une viande 
+                            de bœuf d’exception. Aussi bon pour les carnis que les veggies</span></p>
+                            <div class="b-content-secondary-purchase">
+                                <div class="b-content-secondary-purchase-btn-add">
+                                    <button id="button-minus" class="button-minus">
+                                        -
+                                    </button>
+                                    <div id="number" class="number">0</div>
+                                    <button id="button-plus" class="button-plus">
+                                       +
+                                    </button>
+                                </div>
+                               
+                                <div class="price">€<span class="cost" base="16">16</div>
+                                <button class="b-content-secondary-purchase-btn-shopping">
+                                    <i class="fa fa-shopping-cart"></i>
+                                </button>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="burger.js"></script>
+</body>
+</html>

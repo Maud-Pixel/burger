@@ -1,0 +1,453 @@
+  
+@font-face {
+    font-family: noto-regular;
+    src: url("assets/fonts/Noto_Serif/NotoSerif-Regular.ttf");
+  }
+//_______________variables______________//
+$primary: #f2f2f2; 
+$rose: #e3581a;
+$rose-clair: #f0a889;
+$green: #719953;
+//______________extends ________________//
+
+//extend description for each burger //
+.description {
+    border: 1px solid $primary;
+    border-radius: 10px;
+    background-color: $primary;
+    width: 45%;
+    height: 45%;
+    margin: 0.5vw;
+    
+    img{
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+        
+    }
+    h2{
+        text-align: center;
+        font-size: 20px;
+    }
+    p
+    {
+        font-size: 12px;
+    }
+    
+    .invisible
+    {
+        display: none;
+    }
+        
+    
+    
+}
+//extend for buttonn login and signup //
+.style-button
+{
+    display: inline;
+    border-radius: 20px;
+    border: 1px solid $rose-clair;
+    background-color:$rose;
+    color: $rose-clair;
+    width: auto;
+    max-height: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px 10px 10px 10px;
+    margin-top: 1vh;
+}
+//extends for radio buttons to change sheets//
+.radio-buttons
+{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+        appearance: none;
+
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+
+    border: 2px solid $primary;
+    transition: 0.2s all linear;
+    margin-right: 5px;
+    background-color: #8c8c8c;
+}
+.radio-checked-buttons
+{
+    appearance: none;
+    background-color: $rose;
+    border : 3px solid $rose-clair;
+    list-style: none; 
+}
+//extend for widget calories //
+.calories_details
+{
+    border: 1px solid  #b3b3b3;
+    border-radius: 50%;
+    font-size: 10px;
+    width: 2vw;
+    height: 2vw; 
+    text-align: center;
+}
+//extends for button add products before buy//
+.button_add
+{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    border: 1px solid #8c8c8c;
+    border-radius: 20px;
+    width: 110px;
+    margin-left: 1vw;
+    background-color: $primary;
+    height: 30px;
+    button
+    {
+        border: none;
+        margin: 0px;
+    } 
+    .button-minus
+    {
+        border-right: 1px solid #b3b3b3;
+    } 
+    .button-plus
+    {
+        border-left: 1px solid #b3b3b3;
+    }
+    .number
+    {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+//extends for buttons with shopping card //
+.button-shopping
+{
+    border: 1px solid #86b78a;
+    border-radius: 20px;
+    height: 30px;
+    background-color: #dceadd;
+    margin-right: 1vw;
+    .fa-shopping-cart
+    {
+        margin-right: 15px;
+        font-size: 25px;
+        color:#86b78a;
+    }
+}
+//extends template for four cards with burgers//
+.card_burger
+{
+    @extend .description;
+    .b-content-secondary-details
+    { 
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .radio{
+            @extend .radio-buttons;
+            color: #8c8c8c;
+        }
+        .radio:checked
+        {
+            @extend .radio-checked-buttons;
+
+        }
+        .calories
+        {
+            @extend .calories_details;
+            
+            
+        }
+    }
+    .b-content-secondary-purchase
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .b-content-secondary-purchase-btn-add
+    {
+       @extend .button_add;
+    }
+    .b-content-secondary-purchase-btn-shopping
+    {
+       @extend .button-shopping;
+    }
+   
+}
+//_____________stop extends ______________//
+
+body
+{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    background-color: $primary;
+    padding: 1vw;
+    
+    p { margin: 1vw;}
+}
+.container
+{
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    
+    
+    
+    
+}
+.b-column-left
+{
+    display: flex;
+    flex-direction: column;
+    
+    &-item
+    {
+        height: 50%;
+    }
+    .fa{
+        margin: 1vw;
+        
+    }
+    
+}
+  
+.b-column-right
+{
+    
+    width: 100%;
+    font-family: noto-regular;
+    border-left: 1px solid $primary;
+    
+}
+.b-header
+{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+        
+        &-menu
+        {
+           &-input
+           {
+               display: flex;
+               flex-direction: row;
+               .fa-circle
+               {
+                   display: none;
+                   color: $green;
+                   padding-left: 1vw;
+               }
+           }
+            li
+            {
+                list-style: none;
+                margin: 1vw;
+                font-size: 15px;
+            }
+            &-input__active
+            {
+                color: $green;
+            }
+            
+        
+        }
+        &-button
+        {
+            display: flex;
+            flex-direction: row;
+            font-weight: bold;
+            &__login
+            {
+               @extend .style-button;
+            }
+    
+            &__signup
+            {
+               @extend .style-button;
+               margin-right: 2vw;
+               margin-left: 10px;
+            }
+        }
+       
+}
+.b-content
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    &-primary
+    {
+        width: 45%;
+        border: 1px solid $primary;
+        margin: 1vw;
+        border-radius: 10px;
+        .radio{
+            @extend .radio-buttons;
+        }
+        .radio:checked
+        {
+           @extend .radio-checked-buttons;
+        }
+        &-details
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .calories
+            {
+                @extend .calories_details;
+                
+            }
+        }
+        
+        img{
+            display:block;
+            margin-left:auto;
+            margin-right:auto;
+            margin-top: 2vh;
+        }
+        h2{  
+            margin: 1vw;
+            font-size: 40px;
+        }
+        p{
+            margin: 1vw;
+        }
+        &-composition
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            &-item
+            {
+                border: 2px solid $primary;
+                border-radius: 20px;  
+                font-size: 12px;
+                
+            }
+        }
+        &-purchase
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 10vh;
+            margin-left: 5vh;
+            margin-right: 5vh;
+            .price
+                {
+                    font-size: 40px;
+                }
+            &-btn-add
+            {
+                display: flex;
+                flex-direction: row;
+                justify-content:center;
+                border: 1px solid $primary;
+                border-radius: 20px;
+                width: 110px;
+                margin-left: 1vw;
+                background-color: $primary;
+                height: 30px;
+                button
+                {
+                    border: none;
+                    margin: 0px;
+
+                } 
+                .button-minus
+                {
+                    border-right: 1px solid #b3b3b3;
+                } 
+                .button-plus
+                {
+                    border-left: 1px solid #b3b3b3;
+                }
+                .number
+                {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+                
+                
+            }
+            &-btn-shopping
+            {
+                display: flex;
+                flex-direction: row;
+                border: 1px solid #86b78a;
+                border-radius: 20px;
+                height: 40px;
+                padding-top: 10px;
+                padding-left: 10px;
+                padding-right: 10px;
+                background-color: #dceadd;
+                .fa-shopping-cart
+                {
+                    
+                    margin-right: 15px;
+                    font-size: 25px;
+                    color:#86b78a;
+                }
+                .fa-circle
+                {
+                    font-size: 5px;
+                    color: #86b78a;
+                    
+                }
+                #dot
+                {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin-right: 5px;
+                    
+                }
+                #card
+                {
+                    color:#86b78a;
+
+                }
+            }
+        } 
+        
+    }
+    &-secondary
+    {
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+        &-composition
+        {
+            display: none;
+        }
+        &-one
+        {
+            @extend .card_burger;
+            
+        }
+        &-two
+        {
+            @extend .card_burger;
+
+        }
+        &-three
+        {
+            @extend .card_burger;
+        }
+        &-four
+        {
+            @extend .card_burger;
+        }
+    }
+} 
+
+    
